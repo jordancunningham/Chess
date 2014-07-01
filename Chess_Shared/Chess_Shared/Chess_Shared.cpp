@@ -486,7 +486,7 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 	
 	
-		else if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
+		if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
 		
 			cout<<"You have taken the enemy's "<<board[n2][l2].piece->name<<"!"<<endl<<endl;
 
@@ -515,6 +515,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 
 	else if(board[n1][l1].piece->name.compare("Queen") == 0){
 
+		//cout<<"Inside the queen's if statement..."<<endl;
+
 		//if they just try to move to some random spot
 		if(abs(rowDiff) != abs(colDiff) && rowDiff != 0 && colDiff != 0){
 		
@@ -525,6 +527,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 
 		//COLLISION CHECKING IF STATEMENTS//
 		if(rowDiff > 0 && colDiff > 0){
+
+			//cout<<"rowDiff > 0 && colDiff > 0"<<endl<<endl;
 		
 			for(int i = n1-1; i > n2; i--){
 			
@@ -541,6 +545,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff < 0 && colDiff < 0){
+
+			//cout<<"rowDiff < 0 && colDiff < 0"<<endl<<endl;
 		
 			for(int i = n1+1; i < n2; i++){
 			
@@ -557,6 +563,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff > 0 && colDiff < 0){
+
+			//cout<<"rowDiff > 0 && colDiff < 0"<<endl<<endl;
 		
 			for(int i = n1-1; i > n2; i--){
 			
@@ -573,6 +581,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff < 0 && colDiff > 0){
+
+			//cout<<"rowDiff < 0 && colDiff > 0"<<endl<<endl;
 		
 			for(int i = n1+1; i < n2; i++){
 			
@@ -589,6 +599,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff == 0 && colDiff > 0){
+
+			//cout<<"rowDiff == 0 && colDiff > 0"<<endl<<endl;
 		
 			for(int i = l1-1; i > l2; i--){
 			
@@ -602,6 +614,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff == 0 && colDiff < 0){
+
+			//cout<<"rowDiff == 0 && colDiff < 0"<<endl<<endl;
 		
 			for(int i = l1+1; i < l2; i++){
 			
@@ -615,10 +629,12 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff > 0 && colDiff == 0){
+
+			//cout<<"rowDiff > 0 && colDiff == 0"<<endl;
 		
 			for(int i = n1-1; i > n2; i--){
 			
-				if(board[l1][i].piece != nullptr){
+				if(board[i][l1].piece != nullptr){
 				
 					cout<<"There's a piece blocking your move!"<<endl<<endl;
 					return false;
@@ -628,6 +644,8 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 
 		else if(rowDiff < 0 && colDiff == 0){
+
+			//cout<<"rowDiff < 0 && colDiff == 0"<<endl<<endl;
 		
 			for(int i = n1+1; i < n2; i++){
 			
@@ -640,8 +658,10 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 			}
 		}
 
+		//Sleep(5000);
 
-		else if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
+
+		if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
 		
 			cout<<"You have taken the enemy's "<<board[n2][l2].piece->name<<"!"<<endl<<endl;
 
@@ -678,7 +698,7 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		
 		}
 	
-		else if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
+		if(board[n2][l2].piece != nullptr && board[n2][l2].piece->player != currentPlayer){
 		
 			cout<<"You have taken the enemy's "<<board[n2][l2].piece->name<<"!"<<endl<<endl;
 
@@ -848,7 +868,7 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		
 			for(int i = n1-1; i > n2; i--){
 			
-				if(board[l1][i].piece != nullptr){
+				if(board[i][l1].piece != nullptr){
 				
 					cout<<"There's a piece blocking your move!"<<endl<<endl;
 					return false;
@@ -897,7 +917,7 @@ bool validateMoveRules(string move, Square board[8][8], int currentPlayer){
 		}
 	}
 
-	else return true;	
+	else return false;	
 
 }
 

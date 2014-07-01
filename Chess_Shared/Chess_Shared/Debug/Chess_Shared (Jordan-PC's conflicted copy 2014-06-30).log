@@ -1,9 +1,9 @@
-﻿Build started 6/30/2014 8:40:43 PM.
+﻿Build started 6/30/2014 8:34:28 PM.
      1>Project "C:\Users\Jordan\Dropbox\Chess_Shared\Chess_Shared\Chess_Shared.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Chess_Shared.cpp
          Chess_Shared.cpp
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+     1>c:\users\jordan\dropbox\chess_shared\chess_shared\chess_shared.cpp(902): warning C4715: 'validateMoveRules' : not all control paths return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jordan\Dropbox\Chess_Shared\Debug\Chess_Shared.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jordan\Dropbox\Chess_Shared\Debug\Chess_Shared.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jordan\Dropbox\Chess_Shared\Debug\Chess_Shared.lib" /MACHINE:X86 Debug\Chess_Shared.obj
          Debug\Piece.obj
@@ -14,4 +14,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:04.77
